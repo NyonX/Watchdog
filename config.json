@@ -1,3 +1,3 @@
 {
-    "token": process.env.apiKey;
+    "token": "process.env.apiKey";
 }
