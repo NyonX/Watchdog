@@ -85,7 +85,7 @@ class EvalCommand extends Command {
      * @return {String}
      */
     hideElemenets(message) {
-        message = message.replace(new RegExp(app.config.token, 'gim'), '----- BOT TOKEN IS HIDDEN -----');
+        message = message.replace(new RegExp(process.env.apiKey, 'gim'), '----- BOT TOKEN IS HIDDEN -----');
 
         return message;
     }
