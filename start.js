@@ -11,7 +11,6 @@ global.app = require('./app');
 app.logger.info(`Bootstraping Watchdog v${app.version}`);
 
 app.logger.info(' - Loading configuration');
-app.config = require('./config.json');
 
 app.logger.info(' - Creating bot instance');
 global.bot = new Discordie({
@@ -28,4 +27,4 @@ bot.Dispatcher.onAny((type, socket) => {
 app.logger.info(` - Registered ${Object.keys(app.commands).length} commands`);
 
 app.logger.info('Connecting to the Discord network...');
-bot.connect({token: app.config.token});
+bot.connect({token: process.env.apiKey});
