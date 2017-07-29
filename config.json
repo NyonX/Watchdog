@@ -1,4 +1,3 @@
-var apiKey = process.env.apiKey;
 {
-    "token": apiKey
+    "token": process.env.apiKey;
 }
